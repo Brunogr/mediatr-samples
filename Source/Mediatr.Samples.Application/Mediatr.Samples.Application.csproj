@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Commander.Core\Commander.Core.csproj" />
+    <ProjectReference Include="..\Mediatr.Samples.Domain\Mediatr.Samples.Domain.csproj" />
+    <ProjectReference Include="..\Mediatr.Samples.Infra.Data\Mediatr.Samples.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
