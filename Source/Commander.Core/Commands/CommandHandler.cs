@@ -20,6 +20,8 @@ namespace Commander.Core
 
         public async Task<CommandResult> Handle(TCommand request, CancellationToken cancellationToken)
         {
+            request.Validate();
+
             if (request.Invalid)
                 return new CommandResult(false);
 

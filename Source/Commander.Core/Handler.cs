@@ -15,12 +15,15 @@ namespace Commander.Core
         {
             this.mediator = mediator;
         }
-        public Task RaiseEvent<TEvent>(TEvent @event, CancellationToken cancellationToken = default(CancellationToken)) where TEvent : IEvent
+        public Task RaiseEvent<TEvent>(TEvent @event, 
+            CancellationToken cancellationToken = default(CancellationToken)) 
+            where TEvent : IEvent
         {
             return mediator.Publish(@event, cancellationToken);
         }
 
-        public Task<CommandResult> Send<TCommand>(TCommand command, CancellationToken cancellationToken = default(CancellationToken)) 
+        public Task<CommandResult> Send<TCommand>(TCommand command, 
+            CancellationToken cancellationToken = default(CancellationToken)) 
             where TCommand : ICommand<CommandResult>
         {
             return this.mediator.Send(command, cancellationToken);
